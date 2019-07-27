@@ -25,6 +25,26 @@ body > .board > .cell {
     border: red solid 2px;
 }
 
-.cell:nth-child(1n+3) {
+.cell:nth-child(3) {
+    border-right: 0px !important;
     border-top: 0px !important;
 }
+
+.cell:nth-child(6) {
+    border-right: 0px !important;
+}
+
+.cell:nth-child(9) {
+    border-bottom: 0px !important;
+    border-right: 0px !important;
+}
+
+.cell:nth-child(2) {
+    border-top: 0px !important;
+}
+
+.cell:nth-child(8) {
+    border-bottom: 0px !important;
+}
+
+
