@@ -1,3 +1,7 @@
+//select board
+const board = document.querySelector(".board");
+
+// pattern
 const patterns = [
     [1, 2, 3],
     [1, 5, 9],
@@ -11,3 +15,20 @@ const patterns = [
 let playerTurn = 'x';
 const checkedCellOfPlayerX = [];
 const checkedCellOfPlayerO = [];
+
+
+//add event listener to board
+board.addEventListener("click", e => {
+    const cellId = e.target.getAttribute("data-cell-id");
+
+})
+
+// function
+const playerClick = cellId => {
+    if (playerTurn == "x") {
+
+    } else if (playerTurn == "0") {
+
+    }
+}
+
