@@ -1,20 +1,30 @@
 * {
     box-sizing: border-box;
 }
-body{
-    margin:0;
-    padding:0;
+
+body {
     background: cyan;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-body > .board{
-    width:150px;
-    height: 150px;
+
+body > .board {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
 }
-body > .borad > .cell{
-    width: 50px;
-    height: 50px;
+
+body > .board > .cell {
+    width: 100px;
+    height: 100px;
     border: red solid 2px;
+}
+
+.cell:nth-child(1n+3) {
+    border-top: 0px !important;
 }
