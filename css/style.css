@@ -63,7 +63,19 @@ body>.board>.cell {
     border-bottom: 0px !important;
 }
 
+.board .cell:nth-child(1) {
+    border-left: 0px !important;
+    border-top: 0px !important;
+}
 
+.board .cell:nth-child(4){
+    border-left:0px !important; 
+}
+
+.board .cell:nth-child(7) {
+    border-left: 0px !important;
+    border-bottom: 0px !important;
+}
 i.fa {
     font-size: 70px;
 }
