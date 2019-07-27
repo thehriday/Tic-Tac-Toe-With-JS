@@ -26,6 +26,22 @@ body>.board>.cell {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.board .cell:nth-child(1) {
+    border-left: 0px !important;
+    border-top: 0px !important;
+}
+
+.board .cell:nth-child(4){
+    border-left:0px !important; 
+}
+
+.board .cell:nth-child(7) {
+    border-left: 0px !important;
+    border-bottom: 0px !important;
+}
+>>>>>>> 5f76436893fe378daec7944d6006ef5b33dc3e6f
 .cell:nth-child(3) {
     border-right: 0px !important;
     border-top: 0px !important;
@@ -49,6 +65,7 @@ body>.board>.cell {
 }
 
 
+<<<<<<< HEAD
 =======
 
 .board .cell:nth-child(1) {
@@ -65,3 +82,5 @@ body>.board>.cell {
     border-bottom: 0px !important;
 }
 >>>>>>> 983fc8c6312118df472b86ca9f50a54b331bca79
+=======
+>>>>>>> 5f76436893fe378daec7944d6006ef5b33dc3e6f
