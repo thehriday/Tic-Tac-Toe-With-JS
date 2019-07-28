@@ -5,11 +5,14 @@
 body {
     background: linear-gradient(90deg, #ff40a9ad, #00a1ff);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    padding-bottom: 10%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body>.board {
@@ -81,6 +84,7 @@ body>.board>.cell {
 i.fa {
     font-size: 70px;
     pointer-events: none;
+
 }
 
 i.fa.fa-circle-o {
@@ -99,20 +103,21 @@ i.fa.fa-close {
     height: 10px;
 }
 
-.playerXColor{
+.playerXColor {
     background-color: #77e2b7;
 }
-.playerOColor{
+
+.playerOColor {
     background-color: #2f2f2fe3;
 }
 
-.pattern123{
+.pattern123 {
     width: 100%;
-    top:15%;
+    top: 15%;
 }
 
 .pattern357 {
-    right:1%;
+    right: 1%;
     transform: rotate(-45deg);
     transform-origin: 100%;
     width: 424px;
@@ -131,14 +136,14 @@ i.fa.fa-close {
 }
 
 .pattern789 {
-    width:100%;
-    bottom:15%;
+    width: 100%;
+    bottom: 15%;
 }
 
 .pattern159 {
     width: 424px;
     top: 0%;
-    left:1%;
+    left: 1%;
     transform-origin: 0%;
     transform: rotate(45deg);
 }
@@ -158,16 +163,27 @@ i.fa.fa-close {
     transform: rotate(90deg);
 }
 
-.show-turn {
-    position: fixed;
-    top: calc(100vh - (100vh - 10px));
-}
-
 .turn {
     color: red;
 }
 
-.pattern-animation{
+.pattern-animation {
     animation: widthIncress 0.4s;
 }
 
+button.restart {
+    width: 174px;
+    font-size: 20px;
+    padding: 8px;
+    margin-top: 50px;
+    background: #fd4747;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.restart:hover{
+    background: red;
+}

@@ -5,6 +5,8 @@ const mergeLine = document.querySelector(".merge");
 //select winning sound
 const winningSound = document.querySelector(".winning-sound")
 
+
+
 // pattern
 const patterns = [
     [1, 2, 3],
@@ -23,6 +25,7 @@ const checkedCellOfPlayerO = [];
 
 //add event listener to board
 board.addEventListener("click", e => {
+
     const cellId = Number(e.target.getAttribute("data-cell-id"));
 
     // check cell id is in plyerX or plyerO
@@ -58,20 +61,20 @@ function matchCheck(playerArr) {
 }
 
 function winnerChecker(patterns) {
-    // setTime out is not for delay but for play sound Asynchronization.
-    setTimeout(()=>{
-        winningSound.play()
-    })
+    // play winning sound
+    winningSound.play()
     const patternNum = patterns.join("")
     // add line and line color css class
     mergeLine.className += ` pattern-animation pattern${patternNum} player${playerTurn.toUpperCase()}Color`;
 
-    let keyframes = `<style>
-                             @keyframes widthIncress{
-                                    from{width: 0px;}
-                                    to{width:${mergeLine.clientWidth}px}
-                            }
-                    </style>`
+    let keyframes = `@keyframes widthIncress{
+                        from{ width: 0px ;}
+                        to{ width:${mergeLine.clientWidth}px; }
+                    }`
     // add keyframes to body
-    document.querySelector("body").innerHTML+=keyframes
+    document.querySelector(".insertKeyframe").innerHTML += keyframes
 }
+
+//restart game
+
+document.querySelector(".restart").addEventListener("click",()=>location.reload())
