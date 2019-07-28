@@ -97,7 +97,6 @@ i.fa.fa-close {
     position: absolute;
     width: 0;
     height: 10px;
-    transition: 0.4s;
 }
 
 .playerXColor{
@@ -108,7 +107,7 @@ i.fa.fa-close {
 }
 
 .pattern123{
-    width:100%;
+    width: 100%;
     top:15%;
 }
 
@@ -120,8 +119,7 @@ i.fa.fa-close {
 }
 
 .pattern369 {
-    left: -16%;
-    top: 0;
+    right: 16%;
     transform: rotate(-90deg);
     transform-origin: 100%;
     width: 100%;
@@ -159,3 +157,17 @@ i.fa.fa-close {
     left: 50%;
     transform: rotate(90deg);
 }
+
+.show-turn {
+    position: fixed;
+    top: calc(100vh - (100vh - 10px));
+}
+
+.turn {
+    color: red;
+}
+
+.pattern-animation{
+    animation: widthIncress 0.4s;
+}
+

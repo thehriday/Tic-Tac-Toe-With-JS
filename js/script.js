@@ -30,22 +30,24 @@ board.addEventListener("click", e => {
         if (playerTurn === "x") {
             e.target.innerHTML = `<i class="fa fa-close"></i>`;
             checkedCellOfPlayerX.push(cellId);
-            matchcheck(checkedCellOfPlayerX);
-            //change palyer to O
+            matchCheck(checkedCellOfPlayerX);
+            //change player to O
             playerTurn = "o";
+            document.querySelector('.turn').innerHTML = playerTurn.toUpperCase();
 
         } else if (playerTurn === "o") {
             e.target.innerHTML = `<i class="fa fa-circle-o"></i>`
             checkedCellOfPlayerO.push(cellId);
-            matchcheck(checkedCellOfPlayerO)
+            matchCheck(checkedCellOfPlayerO)
 
-            //change palyer to X
+            //change player to X
             playerTurn = "x";
+            document.querySelector('.turn').innerHTML = playerTurn.toUpperCase();
         }
     }
 });
 
-function matchcheck(playerArr) {
+function matchCheck(playerArr) {
     for (let k = 0; k < patterns.length; k++) {
         let hasIt = patterns[k].reduce((total, i) => total && playerArr.includes(i), true);
         if (hasIt) {
@@ -56,8 +58,20 @@ function matchcheck(playerArr) {
 }
 
 function winnerChecker(patterns) {
-    winningSound.play()
-    const pattenNum = patterns.join("")
+    // setTime out is not for delay but for play sound Asynchronization.
+    setTimeout(()=>{
+        winningSound.play()
+    })
+    const patternNum = patterns.join("")
     // add line and line color css class
-    mergeLine.className += ` pattern${pattenNum} player${playerTurn.toUpperCase()}Color`;
+    mergeLine.className += ` pattern-animation pattern${patternNum} player${playerTurn.toUpperCase()}Color`;
+
+    let keyframes = `<style>
+                             @keyframes widthIncress{
+                                  from{width: 0px;}
+                                    to{width:${mergeLine.clientWidth}}
+                            }
+                    </style>`
+    // add keyframes to body
+    document.querySelector("body").innerHTML+=keyframes
 }
