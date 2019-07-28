@@ -17,6 +17,7 @@ body>.board {
     flex-wrap: wrap;
     height: 300px;
     width: 300px;
+    position: relative;
 }
 
 body>.board>.cell {
@@ -78,6 +79,7 @@ body>.board>.cell {
 }
 i.fa {
     font-size: 70px;
+    pointer-events: none;
 }
 
 i.fa.fa-circle-o {
@@ -88,4 +90,17 @@ i.fa.fa-circle-o {
 i.fa.fa-close {
     font-size: 82px;
     color: #77e2b7;
+}
+
+.merge {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: red;
+    transition: 0.4s;
+}
+
+.pattern123{
+    width:100% !important;
+    top:15% !important;
 }
