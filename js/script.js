@@ -68,8 +68,8 @@ function winnerChecker(patterns) {
 
     let keyframes = `<style>
                              @keyframes widthIncress{
-                                  from{width: 0px;}
-                                    to{width:${mergeLine.clientWidth}}
+                                    from{width: 0px;}
+                                    to{width:${mergeLine.clientWidth}px}
                             }
                     </style>`
     // add keyframes to body
