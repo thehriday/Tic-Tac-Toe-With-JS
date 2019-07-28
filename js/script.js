@@ -72,7 +72,17 @@ function winnerChecker(patterns) {
                         to{ width:${mergeLine.clientWidth}px; }
                     }`
     // add keyframes to body
-    document.querySelector(".insertKeyframe").innerHTML += keyframes
+    document.querySelector(".insertKeyframe").innerHTML += keyframes;
+    setTimeout(()=>{
+        //fate out for board
+        document.querySelector(".turn-and-board").classList.add("fade-out")
+        //winner icon 
+        const winnerIcon = `<i class="fa fa-${playerTurn == 'o' ? 'close' : 'circle-o' }"></i>`
+        document.querySelector(".winner-icon").innerHTML = winnerIcon
+        // fade in for winner
+        document.querySelector(".show-winner").classList.add("fade-in")
+        
+    },1000)
 }
 
 //restart game

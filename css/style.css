@@ -15,7 +15,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-body>.board {
+body .board {
     display: flex;
     flex-wrap: wrap;
     height: 300px;
@@ -23,7 +23,7 @@ body>.board {
     position: relative;
 }
 
-body>.board>.cell {
+body .board .cell {
     width: 100px;
     height: 100px;
     border: #ffffffcf solid 4px;
@@ -43,6 +43,27 @@ body>.board>.cell {
 .board .cell:nth-child(7) {
     border-left: 0px !important;
     border-bottom: 0px !important;
+}
+
+.turn-and-board {
+    transition: 0.4s;
+}
+
+.fade-out{
+    transform: scale(0);
+}
+.fade-in{
+    transform: scale(1) !important;
+}
+
+.show-winner{
+    position: absolute;
+    text-align: center;
+    transition: 0.4s;
+    transform: scale(0);
+}
+.show-winner i{
+    font-size: 100px !important;
 }
 
 .cell:nth-child(3) {
