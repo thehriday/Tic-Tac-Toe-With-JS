@@ -1,5 +1,8 @@
 //select board
 const board = document.querySelector(".board");
+//select marge line
+const mergeLine = document.querySelector(".merge");
+
 
 // pattern
 const patterns = [
@@ -7,6 +10,10 @@ const patterns = [
     [1, 5, 9],
     [1, 4, 7],
     [2, 5, 8],
+    [3, 5, 7],
+    [3, 6, 9],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
 let playerTurn = 'x';
 const checkedCellOfPlayerX = [];
@@ -48,5 +55,7 @@ function matchcheck(playerArr) {
 }
 
 function winnerChecker(patterns) {
-    console.log(patterns.join(""))
+    const pattenNum = patterns.join("")
+    // add line and line color css class
+    mergeLine.className += ` pattern${pattenNum} player${playerTurn.toUpperCase()}Color`;
 }

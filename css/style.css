@@ -96,58 +96,65 @@ i.fa.fa-close {
 .merge {
     position: absolute;
     width: 0;
-    height: 5px;
-    background: red;
+    height: 10px;
     transition: 0.4s;
 }
 
+.playerXColor{
+    background-color: #77e2b7;
+}
+.playerOColor{
+    background-color: #2f2f2fe3;
+}
+
 .pattern123{
-    width:100% !important;
-    top:15% !important;
+    width:100%;
+    top:15%;
 }
 
 .pattern357 {
-    right: 0;
-    transform: rotate(-45deg) !important;
-    transform-origin: 100% !important;
-    width: 424px !important;
+    right:1%;
+    transform: rotate(-45deg);
+    transform-origin: 100%;
+    width: 424px;
 }
 
 .pattern369 {
-    left: -15% !important;
-    top: 0 !important;
-    transform: rotate(-90deg) !important;
-    transform-origin: 100% !important;
-    width: 100% !important;
+    left: -16%;
+    top: 0;
+    transform: rotate(-90deg);
+    transform-origin: 100%;
+    width: 100%;
 }
 
 .pattern456 {
-    width: 100% !important;
-    top: 50% !important;
+    width: 100%;
+    top: 50%;
 }
 
 .pattern789 {
-    width:100% !important;
-    bottom:15% !important;
+    width:100%;
+    bottom:15%;
 }
 
 .pattern159 {
-    width: 424px !important;
-    top: 0% !important;
+    width: 424px;
+    top: 0%;
+    left:1%;
     transform-origin: 0%;
     transform: rotate(45deg);
 }
 
 .pattern147 {
-    width: 100% !important;
-    top: 0% !important;
-    left: 15% !important;
+    width: 100%;
+    top: 0%;
+    left: 16%;
     transform-origin: 0%;
     transform: rotate(90deg);
 }
 
 .pattern258 {
-    width: 100% !important;
+    width: 100%;
     transform-origin: 0%;
     left: 50%;
     transform: rotate(90deg);
