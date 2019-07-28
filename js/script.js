@@ -48,6 +48,5 @@ function matchcheck(playerArr) {
 }
 
 function winnerChecker(patterns) {
-    alert(patterns)
-
+    console.log(patterns.join(""))
 }
