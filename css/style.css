@@ -62,8 +62,12 @@ body .board .cell {
     transition: 0.4s;
     transform: scale(0);
 }
-.show-winner i{
+.show-winner i.fa.fa-circle-o {
     font-size: 100px !important;
+}
+.show-winner i.fa.fa-close {
+    margin-right: 20px;
+    font-size: 116px !important;
 }
 
 .cell:nth-child(3) {

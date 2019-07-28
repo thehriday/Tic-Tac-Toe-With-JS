@@ -1,3 +1,4 @@
+
 //select board
 const board = document.querySelector(".board");
 //select marge line
@@ -22,9 +23,11 @@ let playerTurn = 'x';
 const checkedCellOfPlayerX = [];
 const checkedCellOfPlayerO = [];
 
+let hasWinner = false;
 
 //add event listener to board
 board.addEventListener("click", e => {
+    console.time("time")
     const {
         className
     } = e.target
@@ -44,11 +47,12 @@ board.addEventListener("click", e => {
             e.target.innerHTML = `<i class="fa fa-circle-o"></i>`
             checkedCellOfPlayerO.push(cellId);
             matchCheck(checkedCellOfPlayerO)
-
             //change player to X
             playerTurn = "x";
             document.querySelector('.turn').innerHTML = playerTurn.toUpperCase();
         }
+        drawMatch()
+        console.timeEnd("time")
     }
 });
 
@@ -63,8 +67,10 @@ function matchCheck(playerArr) {
 }
 
 function winnerChecker(patterns) {
+    // we got winner
+    hasWinner = true;
     // user will not be able to click any more
-    board.style = "pointer-events: none;"
+    board.style = "pointer-events: none;";
     // play winning sound
     winningSound.play()
     const patternNum = patterns.join("")
@@ -94,3 +100,22 @@ function winnerChecker(patterns) {
 //restart game
 
 document.querySelector(".restart").addEventListener("click", () => location.reload())
+
+// match draw
+function drawMatch() {
+    const lengthOfX = checkedCellOfPlayerX.length;
+    if (lengthOfX === 5 && !hasWinner) {
+        setTimeout(() => {
+            //fate out for board
+            document.querySelector(".turn-and-board").classList.add("fade-out")
+            //winner icon 
+            const winnerIcon = '<i class="fa fa-close"></i> <i class="fa fa-circle-o"></i>';
+            // winner or draw
+            document.querySelector(".winnerState").innerText = "Match Draw!";
+            document.querySelector(".winner-icon").innerHTML = winnerIcon
+            // fade in for winner
+            document.querySelector(".show-winner").classList.add("fade-in")
+    
+        }, 1000)
+    }
+}
