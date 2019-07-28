@@ -184,6 +184,10 @@ i.fa.fa-close {
     transform: rotate(90deg);
 }
 
+.show-turn{
+    text-align: center;
+}
+
 .turn {
     color: red;
 }

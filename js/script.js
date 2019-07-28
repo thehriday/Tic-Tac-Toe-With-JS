@@ -25,7 +25,8 @@ const checkedCellOfPlayerO = [];
 
 //add event listener to board
 board.addEventListener("click", e => {
-
+    console.log(e.target);
+    
     const cellId = Number(e.target.getAttribute("data-cell-id"));
 
     // check cell id is in plyerX or plyerO
@@ -81,7 +82,7 @@ function winnerChecker(patterns) {
         document.querySelector(".winner-icon").innerHTML = winnerIcon
         // fade in for winner
         document.querySelector(".show-winner").classList.add("fade-in")
-        
+
     },1000)
 }
 
