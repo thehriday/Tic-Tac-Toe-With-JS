@@ -116,7 +116,7 @@ i.fa.fa-close {
 .pattern369 {
     left: -15% !important;
     top: 0 !important;
-    transform: rotate(270deg) !important;
+    transform: rotate(-90deg) !important;
     transform-origin: 100% !important;
     width: 100% !important;
 }
@@ -129,11 +129,6 @@ i.fa.fa-close {
 .pattern789 {
     width:100% !important;
     bottom:15% !important;
-}
-
-.pattern123 {
-    width: 100% !important;
-    top: 15% !important;
 }
 
 .pattern159 {
