@@ -27,7 +27,6 @@ let hasWinner = false;
 
 //add event listener to board
 board.addEventListener("click", e => {
-    console.time("time")
     const {
         className
     } = e.target
@@ -52,7 +51,6 @@ board.addEventListener("click", e => {
             document.querySelector('.turn').innerHTML = playerTurn.toUpperCase();
         }
         drawMatch()
-        console.timeEnd("time")
     }
 });
 
