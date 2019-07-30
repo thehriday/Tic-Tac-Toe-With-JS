@@ -4,6 +4,7 @@
 }
 
 body {
+    background:#ff40a9ad;
     background: -webkit-gradient(linear, left top, right top, from(#ff40a9ad), to(#00a1ff));
     background: -o-linear-gradient(left, #ff40a9ad, #00a1ff);
     background: linear-gradient(90deg, #ff40a9ad, #00a1ff);
